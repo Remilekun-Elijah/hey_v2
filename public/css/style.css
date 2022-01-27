@@ -1,0 +1,308 @@
+      :root {
+      --primary-blue: #185FAD
+     }
+     
+     @font-face {
+      font-family: 'akzidenz-grotesk';
+      src: url('/fonts/akzidenz-grotesk-bq-extended.otf');
+      font-family: 'Gilroy';
+      src: url('/fonts/Gilroy.ttf');
+     }
+     
+     body {
+      font-family: 'akzidenz-grotesk' !important;
+      overflow-x: hidden;
+      font-size: 16px;
+     }
+     
+      ::-webkit-scrollbar {
+      width: 5px;
+     }
+     /* Track */
+     
+     body::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 4px var(--primary-blue);
+      box-shadow: inset 0 0 4px var(--primary-blue);
+     }
+     
+     body::-webkit-scrollbar-thumb {
+      background-color: white;
+      border-radius: 10px;
+     }
+     /* NAVBAR */
+     
+     .navbar-brand {
+      padding: 0px;
+      margin: 0;
+     }
+     
+     .navbar-brand>img {
+      height: 50px;
+     }
+     
+     .nav-link {
+      color: white;
+     }
+     /* NAVBAR |ENDS|*/
+     /* CAROUSEL */
+     
+     .ci-one,
+     .ci-two,
+     .ci-three {
+      height: 90vh;
+      width: 100%;
+      background-size: cover;
+      background-attachment: fixed;
+     }
+     
+     .ci-one {
+      background-image: url(/images/bg.jpg);
+     }
+     
+     .ci-two {
+      background-image: url(/images/header2.png);
+     }
+     
+     .ci-three {
+      background-image: url(/images/header3.jpg);
+      width: 100vw !important;
+     }
+     
+     .ci-one .caption {
+      font-weight: bolder;
+      font-size: 60px;
+     }
+     
+     .ci-two .caption {
+      font-size: 30px;
+      font-weight: bolder;
+     }
+     
+     .ci-three .caption {
+      font-size: 35px;
+      font-weight: bolder;
+     }
+     
+     .ci-two .caption-wrapper img {
+      width: 70px;
+      margin: 0 10px;
+     }
+     
+     .carousel-item button {
+      font-size: 16px !important;
+     }
+     /* CAROUSEL |ENDS| */
+     /* SERVICES */
+     
+     .services {
+      background-image: url(/images/dotted-map.png);
+      background-size: 85% 100%;
+      border-radius: 30px 30px 0 0;
+      background-color: #fff;
+     }
+     
+     h6,
+     p,
+     .gilroy {
+      font-family: "Gilroy" !important;
+     }
+     
+     .grotesk {
+      font-weight: bolder;
+      font-family: "akzidenz-grotesk" !important;
+     }
+     
+     .sans {
+      font-family: sans-serif;
+     }
+     
+     .services h5 {
+      font-size: 20px;
+     }
+     
+     .services p,
+     .platform p {
+      font-size: 18px;
+      font-family: 'Gilroy';
+     }
+     /* SERVICES |ENDS| */
+     /* PLATFORM */
+     
+     .title {
+      font-size: 40px;
+     }
+     
+     .platform {
+      position: relative;
+     }
+     
+     .platform :is(.card-title,
+     .card-text) {
+      font-size: 18px !important;
+     }
+     
+     .platform .card-title {
+      font-family: 'akzidenz-grotesk' !important;
+     }
+     
+     .platform .card-text {
+      font-size: 17px !important;
+      font-family: "Gilroy" !important;
+     }
+     
+     .platform .card-body {
+      padding: 10px 10px !important;
+     }
+     /* PLATFORM |ENDS| */
+     /* FAQ */
+     
+     .faq {
+      position: relative;
+     }
+     
+     .faq-img {
+      position: absolute;
+      bottom: 0;
+      right: 5px;
+      min-width: 300px;
+      height: 400px;
+      opacity: 1;
+     }
+     /* FAQ |ENDS| */
+     /* WHY CHOOSE US */
+     
+     .why__us {}
+     
+     .why__us__img {
+      position: absolute;
+      right: 0;
+      top: -30px;
+      /* width: 50%; */
+      height: 300px;
+      z-index: -1;
+     }
+     /* WHY CHOOSE US |ENDS|*/
+     /* CONTACT US */
+     
+     .contact__us {
+      background-color: #08223E;
+     }
+     
+     .contact__us form {
+      border-radius: 15px;
+      padding: 10px;
+      background-color: white;
+     }
+     
+     .contact__us form :is(input,
+     textarea) {
+      border-radius: 15px;
+      padding: 10px;
+      border: 1px solid #185FAD !important;
+     }
+     
+     .contact__us form :is(input,
+     textarea):focus,
+     .contact__us form :is(input,
+     textarea):not(:focus) {
+      border: 1px solid #B9B8B8 !important;
+      font-family: 'Gilroy';
+     }
+     
+     .contact__us form .form-group {
+      margin-top: 20px;
+     }
+     
+     .contact__us form label {
+      background-color: white;
+      top: -4px;
+      left: 10px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px;
+     }
+     
+     .contact__us form button {
+      border-radius: 15px;
+     }
+     /* CONTACT US |ENDS| */
+     
+     footer {
+      background-color: #08223E;
+     }
+     
+     footer li {
+      margin-top: 15px;
+     }
+     
+     footer li a {
+      color: white;
+      font-family: "Gilroy";
+      font-size: 14px;
+      text-decoration: none;
+     }
+     
+     footer .socials li a img {
+      margin-right: 15px;
+      width: 23px
+     }
+     /* MISCELANOUS */
+     
+     img {
+      pointer-events: none;
+     }
+     
+     .bubble {
+      position: absolute;
+      top: 50%;
+      left: -50px;
+      width: 100px;
+      height: 100px;
+      background-color: #185FAD;
+      opacity: .5;
+      border-radius: 50%;
+     }
+     
+     .bubble span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-10%, -50%) rotate(90deg);
+      font-size: 20px;
+      color: white;
+     }
+     
+     .text-bold {
+      font-weight: bold;
+     }
+     
+     .text-blue {
+      color: #185FAD !important;
+     }
+     
+     .btn-blue,
+     .btn-outline-blue:hover,
+     .bg-blue {
+      background-color: #185FAD;
+      color: #fff;
+     }
+     
+     .btn-blue:hover,
+     .btn-outline-blue {
+      background-color: #fff;
+      color: #185FAD;
+      border-color: #185FAD;
+     }
+     
+     .text-16 {
+      font-size: 16px;
+     }
+     
+     .text-white {
+      color: #fff !important;
+     }
+     
+     .card img {
+      min-height: 200px !important;
+      max-height: 250px !important;
+     }

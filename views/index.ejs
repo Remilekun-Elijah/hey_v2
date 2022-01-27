@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+ <meta charset="utf-8">
+ <title>Hey Nigeria</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="/libraries/css/bootstrap.min.css">
+ <link rel="stylesheet" href="/css/style.css">
+ <!-- FONT AWESOME -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+
+<body>
+ <header>
+  <div class="alert bg-blue text-white text-center rounded-0 alert-dismissible fade show my-0" role="alert">
+   <p class="text-16 p-0 m-0">Now in Lagos. Get your freight delivered same-day in the whole district of Lagos</p>
+   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+
+  <%- include('templates/carousel') %>
+ </header>
+ <main class="">
+  <%- include('templates/services') %>
+   <%- include('templates/faq') %>
+    <hr class="m-0 p-0">
+    <%- include('templates/how_to_use') %>
+     <%- include('templates/contact') %>
+      <hr class="m-0 p-0">
+      <%- include('templates/footer') %>
+
+ </main>
+
+ <script type="text/javascript" src="/libraries/js/jquery-3.6.0.min.js"></script>
+ <script type="text/javascript" src="/libraries/js/bootstrap.bundle.min.js"></script>
+
+ <script>
+  // $(document).ready(function() {
+  setInterval(e => {
+    //  $('.alert p')
+    if ($('.ci-two').hasClass('active')) $('.alert p').text('Now in Dallas. Get your freight delivered same-day in the Dallas-Fort Worth region.')
+    else if ($('.ci-three').hasClass('active')) $('.alert p').text('Now in Nigeria. Get your freight delivered same-day in the Dallas-Fort Worth region.')
+    else if ($('.ci-one').hasClass('active')) $('.alert p').text('Now in Lagos. Get your freight delivered same-day in the whole district of Lagos')
+
+   }, 2000)
+   // });
+
+
+  // store components in variables
+  const page = document.querySelector("body");
+  const wrapper = page
+
+  // ease value to be used in interpolation
+  const ease = 0.05; // 20%
+
+  // create an object to store scroll details
+  const scroll = {
+   current: 0, // current scroll position
+   target: 0, // target scroll position
+   limit: 0 // limit of scroll
+  };
+
+  // function to update target scroll position
+  const updateTarget = (e) => {
+   // set the target value to deltaY
+   // which is distance covered by mouseWheel
+   scroll.target += e.deltaY;
+  };
+
+  // create an event listener to listen for mouse-wheel
+  document.addEventListener("mousewheel", updateTarget);
+
+  // linear interpolation function
+  const lerp = (current, target) => {
+   // get distance between current & target scroll points
+   const distanceBetween = target - current;
+
+   // get a percentage of that distance, in this case 20%
+   const distanceToTravel = distanceBetween * ease;
+
+   // add the % distance to the current scroll value
+   return current + distanceToTravel;
+
+   // shorthand for lerp is
+   // current = current + ((target - current) * ease)
+  };
+
+  // clamping function to limit mousewheel values
+  const clamp = (min, max, value) => {
+   const clamped = Math.min(Math.max(value, min), max);
+   return clamped;
+  };
+
+  // main scroll function
+  const smoothScroll = (e) => {
+   const maxScroll = wrapper.clientHeight - window.innerHeight - window.scrollY - 10 // -1 to prevent rounding issues;
+    //  maxScroll > 0 ? scroll.limit = maxScroll : scroll.limit = 0;
+
+   //  console.log(document.querySelector('header').clientHeight)
+   // clamp scroll target value
+   scroll.target = clamp(0, maxScroll, scroll.target);
+   //  console.log(scroll.target)
+
+   const {
+    current,
+    target
+   } = scroll;
+
+   const transition = lerp(current, target);
+   scroll.current = transition;
+
+   // translate page wrapper based on lerped value
+   wrapper.style.transform = `translateY(-${scroll.current}px)`;
+
+   // use requestAnimationFrame with callback
+   // to create an infinite loop of this function
+   // that updates 60 times per second
+   // or 30 times per second
+   // depending on browser refresh rate
+   window.requestAnimationFrame(smoothScroll);
+  };
+
+  // call smoothScroll to start loop
+  smoothScroll();
+ </script>
+
+</body>
+
+</html>
