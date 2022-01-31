@@ -34,8 +34,176 @@
 
  <script type="text/javascript" src="/libraries/js/jquery-3.6.0.min.js"></script>
  <script type="text/javascript" src="/libraries/js/bootstrap.bundle.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
 
  <script>
+  // how to know if you have scroll to the end of the page
+  // https://stackoverflow.com/questions/288699/get-scrollbar-width-using-javascript
+  gsap.registerPlugin(ScrollTrigger);
+
+  const tag = selector => document.querySelector(selector);
+  const tl = new TimelineMax({
+   duration: 1,
+   delay: 0,
+   immediateRender: true,
+  });
+  tl.fromTo(tag('.alert'), 1, {
+    opacity: 0,
+    y: -50
+   }, {
+    opacity: 1,
+    y: 0
+   }, '-=0.5')
+   .fromTo(tag('.carousel'), 1, {
+    opacity: 0,
+    y: 50
+   }, {
+    opacity: 1,
+    y: 0
+   }, '-=0.5')
+   .fromTo(tag('.navbar-brand'), {
+    opacity: 0,
+    y: -20,
+    ease: Power2.easeInOut
+   }, {
+    opacity: 1,
+    y: 0,
+    ease: Power2.easeOut
+   })
+   .fromTo($('.nav-item'), {
+    x: -80,
+    opacity: 0,
+   }, {
+    x: 0,
+    opacity: 1,
+    stagger: 0.2,
+    ease: Power2.easeOut
+   })
+   .fromTo([$('.carousel .active p'), $('.carousel .active button')], {
+    opacity: 0,
+    y: -20,
+   }, {
+    opacity: 1,
+    y: 0,
+    ease: Power2.easeOut,
+    stagger: 0.2
+   });
+
+  const tl2 = new TimelineMax({
+   scrollTrigger: {
+    trigger: tag('.services'),
+    triggerAction: "play pause resume reverse",
+    start: 'top bottom',
+    end: 'center bottom',
+    // end: 'bottom top',
+    // end: 'bottom bottom',
+
+    // pin: true,
+    // anticipatePin: 1,
+    // markers: true,
+    id: 'services',
+
+   }
+  });
+  tl2.from(tag('.row1 h2'), 1, {
+   opacity: 0,
+   x: -50,
+   ease: Power2.easeInOut,
+   duration: .4
+  })
+  tl2.fromTo($('.row1 h5, .row1 p'), 1, {
+   opacity: 0,
+   duration: .3,
+   y: -80,
+   //  ease: Power2.easeInOut,
+   stagger: 0.2,
+  }, {
+   opacity: 1,
+   duration: .3,
+   y: 0,
+   stagger: 0.2,
+  });
+
+
+  let tl4 = new TimelineMax({
+   scrollTrigger: {
+    trigger: tag('.row2-begin'),
+    triggerAction: "play pause resume reverse",
+    start: 'center bottom',
+    end: 'bottom bottom',
+    // scrub: true,
+   }
+  });
+  tl4.from($('.row2 .bg-blue'), 1, {
+   opacity: 0,
+   y: 80,
+   ease: Power2.easeInOut,
+   duration: .2,
+   stagger: 0.1,
+  });
+
+
+  const tl3 = new TimelineMax({
+   scrollTrigger: {
+    trigger: tag('.row2-begin'),
+    triggerAction: "play pause resume reverse",
+    start: 'center bottom',
+    end: 'bottom bottom',
+    // end: 'bottom top',
+    // end: 'bottom bottom',
+    // scrub: true,
+    // pin: true,
+    anticipatePin: 1,
+    // markers: true,
+    id: 'row2-begin',
+    duration: .4,
+   }
+  });
+  tl3.fromTo(tag('.row2 img'), {
+   opacity: 0,
+   x: 50,
+   y: 50,
+   ease: Power2.easeInOut
+  }, {
+   opacity: 1,
+   x: 0,
+   y: 0,
+   ease: Power2.easeOut,
+  });
+
+  tl3.from($('.row2 h5'), 1, {
+   opacity: 0,
+   //  duration: 1,
+   y: -50,
+   //  ease: Power2.easeInOut,
+   stagger: .1,
+  });
+
+  tl3.from([$('.row2 p'), $('.row2 .bg-blue img')], 1, {
+   opacity: 0,
+   //  duration: 1,
+   y: 50,
+   //  ease: Power2.easeInOut,
+   stagger: .1,
+  });
+  tl3.from($('.row2 .bg-blue .fas'), 1, {
+   opacity: 0,
+   x: 20,
+   //  stagger: .1,
+  });
+
+
+
+
+
+
+
+
+
+
+
   // $(document).ready(function() {
   setInterval(e => {
     //  $('.alert p')
@@ -126,12 +294,7 @@
  </script>
 
 
- <script>
-  if (window.innerWidth >= 1400) {
-   //  document.querySelector('footer').firstElementChild.classList.add('container')
-  }
-  // alert(window.innerWidth)
- </script>
+
 </body>
 
 </html>
