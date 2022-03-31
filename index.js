@@ -10,8 +10,12 @@ app.use( express.urlencoded( { extended: false } ) );
 
 app.use( express.static( 'public' ) );
 
-app.use( '/', ( req, res ) => {
+app.get( '/', ( req, res ) => {
  res.render( 'index' );
 } );
+
+app.get("/signup", (req, res) => {
+    res.render("signup");
+})
 
 app.listen( process.env.PORT || 3000, e => console.log( 'app running on port 3000' ) );

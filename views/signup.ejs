@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../libraries/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ </head>
+ <body>
+  
+  <div class="sign_2  ">
+    <div class="tab-content row ">
+      <div class="col-md-6 d-none d-md-block">
+        <img style="width: 100%; height: 100%;  " src="/images/Login.png" alt="">
+      </div>
+      <div class="tab-pane active col-md-5 container ms-4" id="signup">
+        <p class="fs-1 fw-bold pt-4  my-5 dm-sans">Log in!</p>
+        <div class="d-flex my-4  ">
+          <a class=" text-decoration-none text-secondary fs-6 active"href="#"><h5 class="dm-sans  sign_1">SIGN IN</h5></a>
+          <a class=" text-decoration-none text-secondary fs-6" href="#"><h5 class="dm-sans ms-5 sign_1">SIGN UP</h5></a>
+        </div>
+        <form class="me-5 " style="width:90%" action="../controllers/signup.php" method="post">
+          <div class="form-group">
+            <label class="my-3 fw-bold dm-sans" for="exampleInputEmail1">Username or email address*</label>
+            <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="email" class="form-control border-0" id="exampleInputEmail1" aria-describedby="emailHelp"
+               name="email">
+          </div>
+          <div class="form-group">
+            <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Password*</label>
+            <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="password" class="form-control border-0" id="exampleInputPassword1" name="password">
+          </div>
+          <div class="form-check pt-4">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label dm-sans" for="flexCheckDefault">
+              Remember me
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary my-4 dm-sans" style="width: 180px; height: 55px; border-radius: 0px">SIGN UP</button>
+        </form> 
+        <p class="dm-sans text-secondary mb-3">Login in as E-Commerce, <a class="text-decoration-none" href="#"><span class="text-primary ">Click here</span></a></p>
+        <p class="dm-sans text-secondary mb-5">By signing up, you agree to our <a class="text-decoration-none" href="#"><span class="text-primary ">Terms & Condition</span></a>  and <a class="text-decoration-none" href="#"><span class="text-primary "> Privacy Policy.</span></a> </p>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="sign_2  ">
+    <div class="tab-content row ">
+      <div class="col-md-6 d-none d-md-block">
+        <img style="width: 100%; height: 100%; object-fit: fill; " src="/images/Sign_Up.png" alt="">
+      </div>
+      <div class="tab-pane active col-md-5 container ms-4" id="signup">
+        <p class="fs-1 fw-bold pt-4  my-5 dm-sans">Register</p>
+        <div class="d-flex my-4  ">
+          <a class=" text-decoration-none text-secondary fs-6 active"href="#"><h5 class="dm-sans  sign_1">SIGN IN</h5></a>
+          <a class=" text-decoration-none text-secondary fs-6" href="#"><h5 class="dm-sans ms-5 sign_1">SIGN UP</h5></a>
+        </div>
+        <form class="me-5 " style="width:90%" action="../controllers/signup.php" method="post">
+          <div class="form-group">
+            <label class="my-3 fw-bold dm-sans" for="exampleInputEmail1">Email address*</label>
+            <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="email" class="form-control border-0" id="exampleInputEmail1" aria-describedby="emailHelp"
+               name="email">
+          </div>
+          <div class="form-group ">
+            <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Phone Number*</label>
+            <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="text" class="form-control border-0" id="exampleInputPassword1" 
+              name="phone_number">
+          </div>
+          <div class="form-group">
+            <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Password*</label>
+            <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="password" class="form-control border-0" id="exampleInputPassword1" name="password">
+          </div>
+          <div class="form-group">
+            <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Referral Code</label>
+            <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="text" class="form-control border-0" id="exampleInputPassword1" name="referralCode">
+          </div>
+          <button type="submit" class="btn btn-primary my-5 dm-sans" style="width: 180px; height: 55px; border-radius: 0px">SIGN UP</button>
+        </form> 
+        <p class="dm-sans text-secondary mb-5">By signing up, you agree to our <a class="text-decoration-none" href="#"><span class="text-primary ">Terms & Condition</span></a>  and <a class="text-decoration-none" href="#"><span class="text-primary "> Privacy Policy.</span></a> </p>
+        <p class="text-end me-5 mb-5 fw-bold fw-normal">2021 HEyNigeria. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  
+
+<script src="../libraries/js/jquery-3.6.0.min.js"></script>
+<script src="../libraries/js/jquery-3.6.0.min.js"></script>
+<!-- authenticate user login and sign up -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+    $('#signup').click(function(){
+      $('#signup').addClass('active');
+      $('#signin').removeClass('active');
+      $('#signup-form').show();
+      $('#signin-form').hide();
+    });
+
+    $('#signin').click(function(){
+      $('#signin').addClass('active');
+      $('#signup').removeClass('active');
+      $('#signin-form').show();
+      $('#signup-form').hide();
+    });
+  });
+</script>
+
+</body>
+</html>
