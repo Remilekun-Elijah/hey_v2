@@ -1,111 +1,173 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Sign Up</title>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" type="text/css" href="../libraries/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- </head>
- <body>
-  
-  <div class="sign_2  ">
+
+  <style>
+    .sign_2 a>.active {
+      border-bottom: 3px solid #00a8ff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sign_2">
     <div class="tab-content row ">
-      <div class="col-md-6 d-none d-md-block">
-        <img style="width: 100%; height: 100%;  " src="/images/Login.png" alt="">
-      </div>
-      <div class="tab-pane active col-md-5 container ms-4" id="signup">
-        <p class="fs-1 fw-bold pt-4  my-5 dm-sans">Log in!</p>
-        <div class="d-flex my-4  ">
-          <a class=" text-decoration-none text-secondary fs-6 active"href="#"><h5 class="dm-sans  sign_1">SIGN IN</h5></a>
-          <a class=" text-decoration-none text-secondary fs-6" href="#"><h5 class="dm-sans ms-5 sign_1">SIGN UP</h5></a>
+      <div class="d-flex justify-content-center">
+        <div class="col-md-6 d-none mt-0 img-1 pt-0 d-md-block">
+          <img style="width: 100%; height: 100%; object-fit: contain;" src="/images/login_img.png" alt="">
         </div>
-        <form class="me-5 " style="width:90%" action="../controllers/signup.php" method="post">
-          <div class="form-group">
-            <label class="my-3 fw-bold dm-sans" for="exampleInputEmail1">Username or email address*</label>
-            <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="email" class="form-control border-0" id="exampleInputEmail1" aria-describedby="emailHelp"
-               name="email">
+        <div class="col-md-6 d-none mt-0 img-2 pt-0 d-md-none d-md-block" -mg-1>
+          <img class="mt-0 mt-0 " style="width: 100%; height: 100%; object-fit: contain;"
+            src="/images/signup_img.png" alt="">
+        </div>
+        <div class="tab-pane active col-md-5 container ms-4" id="signup">
+          <p class="fs-1 fw-bold pt-4 my-5 dm-sans text">Log in!</p>
+          <div class="col-md-6 d-none d-md-block">
+            <div class="d-flex my-4">
+              <a class=" text-decoration-none text-secondary fs-6 " href="#">
+                <h5 class="dm-sans  signin_btn active">SIGN IN</h5>
+              </a>
+              <a class=" text-decoration-none text-secondary fs-6" href="#">
+                <h5 class="dm-sans ms-5 signup_btn">SIGN UP</h5>
+              </a>
+            </div>
           </div>
-          <div class="form-group">
-            <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Password*</label>
-            <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="password" class="form-control border-0" id="exampleInputPassword1" name="password">
-          </div>
-          <div class="form-check pt-4">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label dm-sans" for="flexCheckDefault">
-              Remember me
-            </label>
-          </div>
-          <button type="submit" class="btn btn-primary my-4 dm-sans" style="width: 180px; height: 55px; border-radius: 0px">SIGN UP</button>
-        </form> 
-        <p class="dm-sans text-secondary mb-3">Login in as E-Commerce, <a class="text-decoration-none" href="#"><span class="text-primary ">Click here</span></a></p>
-        <p class="dm-sans text-secondary mb-5">By signing up, you agree to our <a class="text-decoration-none" href="#"><span class="text-primary ">Terms & Condition</span></a>  and <a class="text-decoration-none" href="#"><span class="text-primary "> Privacy Policy.</span></a> </p>
+          <form class="me-5 d-non signup_form" style="width:90%" action="/signin" method="post">
+            <div class="form-group">
+              <label class="my-3 fw-bold dm-sans" for="exampleInputEmail1">Email address</label>
+              <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="email"
+                class="form-control border-0" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+            </div>
+            <div class="form-group">
+              <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Password</label>
+              <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="password"
+                class="form-control border-0" id="exampleInputPassword1" name="password" required>
+            </div>
+            <div class="form-check pt-4">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label dm-sans" for="flexCheckDefault">
+                Remember me
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary my-4 dm-sans"
+              style="width: 180px; height: 55px; border-radius: 0px">SIGN IN</button>
+            <p class="dm-sans d-md-none text-secondary mb-3">Don't have an account?<a class="btn text-primary signup_btn_alt">Sign Up.</a> 
+              <!-- <a class="text-decoration-none"
+                href="#"><span class="text-primary ">Click here</span></a> -->
+              </p>
+            <!-- <p class="dm-sans text-secondary mb-5">By signing up, you agree to our <a class="text-decoration-none"
+                href="#"><span class="text-primary ">Terms & Condition</span></a> and <a class="text-decoration-none"
+                href="#"><span class="text-primary "> Privacy Policy.</span></a> </p> -->
+          </form>
+
+          <form class="me-5 d-none form-2 signin_form" style="width:90%" action="/signup" method="post">
+            <div class="form-group">
+              <label class="my-3 fw-bold dm-sans" for="exampleInputEmail1">Email address <b class="text-danger">*</b></label>
+              <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="email"
+                class="form-control border-0" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+            </div>
+            <div class="form-group ">
+              <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Phone Number <b class="text-danger">*</b></label>
+              <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="text"
+                class="form-control border-0" id="exampleInputPassword1" name="phone_number" required minlength="10">
+            </div>
+            <div class="form-group">
+              <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Password <b class="text-danger">*</b></label>
+              <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="password"
+                class="form-control border-0" id="exampleInputPassword1" name="password" required>
+            </div>
+            <div class="form-group">
+              <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Referral Code</label>
+              <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="text"
+                class="form-control border-0" id="exampleInputPassword1" name="referralCode">
+            </div>
+            <button type="submit" class="btn my-3 btn-primary my- dm-sans"
+              style="width: 180px; height: 50px; border-radius: 0px">SIGN UP</button>
+            <p class="dm-sans text-secondary">By signing up, you agree to our <a class="text-decoration-none"
+                href="#"><span class="text-primary ">Terms & Condition</span></a> and <a class="text-decoration-none"
+                href="#"><span class="text-primary "> Privacy Policy.</span></a> </p>
+
+                <p class="dm-sans d-md-none text-secondary mt-0 mb-3">Already have an account?<a class="btn text-primary signin_btn_alt">Sign In.</a> 
+          </form>
+        </div>
+
       </div>
+
+      <!-- <div class="tab-content d-flex">
+
+        <div class="tab-pane active col-md-5 container ms-4" id="signup">
+           <div class="d-flex my-">
+            <a class=" text-decoration-none text-secondary fs-6 active" href="#">
+              <h5 class="dm-sans  sign_1" id="register">SIGN IN</h5>
+            </a>
+            <a class=" text-decoration-none text-secondary fs-6" href="#">
+              <h5 class="dm-sans ms-5 sign_1">SIGN UP</h5>
+            </a>
+          </div> --
+          !-- <p class="fs-1 fw-bold pt-  my- dm-sans">Register</p> --
+
+          <p class="text-end me-5 mb-5 fw-bold fw-normal">2021 HeyLogistic. All Rights Reserved.</p>
+        </div>
+      </div> -->
     </div>
   </div>
-  
 
-  <div class="sign_2  ">
-    <div class="tab-content row ">
-      <div class="col-md-6 d-none d-md-block">
-        <img style="width: 100%; height: 100%; object-fit: fill; " src="/images/Sign_Up.png" alt="">
-      </div>
-      <div class="tab-pane active col-md-5 container ms-4" id="signup">
-        <p class="fs-1 fw-bold pt-4  my-5 dm-sans">Register</p>
-        <div class="d-flex my-4  ">
-          <a class=" text-decoration-none text-secondary fs-6 active"href="#"><h5 class="dm-sans  sign_1">SIGN IN</h5></a>
-          <a class=" text-decoration-none text-secondary fs-6" href="#"><h5 class="dm-sans ms-5 sign_1">SIGN UP</h5></a>
-        </div>
-        <form class="me-5 " style="width:90%" action="../controllers/signup.php" method="post">
-          <div class="form-group">
-            <label class="my-3 fw-bold dm-sans" for="exampleInputEmail1">Email address*</label>
-            <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="email" class="form-control border-0" id="exampleInputEmail1" aria-describedby="emailHelp"
-               name="email">
-          </div>
-          <div class="form-group ">
-            <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Phone Number*</label>
-            <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="text" class="form-control border-0" id="exampleInputPassword1" 
-              name="phone_number">
-          </div>
-          <div class="form-group">
-            <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Password*</label>
-            <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="password" class="form-control border-0" id="exampleInputPassword1" name="password">
-          </div>
-          <div class="form-group">
-            <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Referral Code</label>
-            <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="text" class="form-control border-0" id="exampleInputPassword1" name="referralCode">
-          </div>
-          <button type="submit" class="btn btn-primary my-5 dm-sans" style="width: 180px; height: 55px; border-radius: 0px">SIGN UP</button>
-        </form> 
-        <p class="dm-sans text-secondary mb-5">By signing up, you agree to our <a class="text-decoration-none" href="#"><span class="text-primary ">Terms & Condition</span></a>  and <a class="text-decoration-none" href="#"><span class="text-primary "> Privacy Policy.</span></a> </p>
-        <p class="text-end me-5 mb-5 fw-bold fw-normal">2021 HEyNigeria. All Rights Reserved.</p>
-      </div>
-    </div>
-  </div>
 
-  
 
-<script src="../libraries/js/jquery-3.6.0.min.js"></script>
-<script src="../libraries/js/jquery-3.6.0.min.js"></script>
-<!-- authenticate user login and sign up -->
-<script type="text/javascript">
-  $(document).ready(function(){
+
+  <script src="../libraries/js/jquery-3.6.0.min.js"></script>
+  <!-- authenticate user login and sign up -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $('.sign_2 .signup_btn').click(function () {
+        $('.sign_2 .signup_btn').addClass("active")
+        $('.sign_2 .signin_btn').removeClass('active');
+        $('.sign_2 .text').text('Register!');
+        $('.sign_2 .signup_form').removeClass('d-block').addClass('d-none');
+        $('.sign_2 .signin_form').removeClass('d-none').addClass('d-block');
+        $('.sign_2 .img-1').removeClass("d-md-block").addClass("d-md-none");
+        $('.sign_2 .img-2').removeClass("d-md-none").addClass("d-md-block");
+        // $('#signin-form').hide();
+      });
+
+      $('.sign_2 .signin_btn').click(function () {
+        $('.sign_2 .signup_btn').removeClass("active")
+        $('.sign_2 .signin_btn').addClass('active');
+        $('.sign_2 .text').text('Log in!');
+        $('.sign_2 .signup_form').removeClass('d-none').addClass('d-block');
+        $('.sign_2 .signin_form').removeClass('d-block').addClass('d-none');
+        $('.sign_2 .img-1').removeClass("d-md-none").addClass("d-md-block");
+        $('.sign_2 .img-2').removeClass("d-md-block").addClass("d-md-none");
+        // $('#signin-form').hide();
+      });
+    });
+
+    $('.sign_2 .signup_btn_alt').click(function () {
+        $('.sign_2 .text').text('Register!');
+        $('.sign_2 .signup_form').removeClass('d-block').addClass('d-none');
+        $('.sign_2 .signin_form').removeClass('d-none').addClass('d-block');
+        $('.sign_2 .img-1').removeClass("d-md-block").addClass("d-md-none");
+        $('.sign_2 .img-2').removeClass("d-md-none").addClass("d-md-block");
+      });
+
+      $('.sign_2 .signin_btn_alt').click(function () {
+        $('.sign_2 .text').text('Log in!');
+        $('.sign_2 .signup_form').removeClass('d-none').addClass('d-block');
+        $('.sign_2 .signin_form').removeClass('d-block').addClass('d-none');
+        $('.sign_2 .img-1').removeClass("d-md-none").addClass("d-md-block");
+        $('.sign_2 .img-2').removeClass("d-md-block").addClass("d-md-none");
+      });
     
-    $('#signup').click(function(){
-      $('#signup').addClass('active');
-      $('#signin').removeClass('active');
-      $('#signup-form').show();
-      $('#signin-form').hide();
-    });
-
-    $('#signin').click(function(){
-      $('#signin').addClass('active');
-      $('#signup').removeClass('active');
-      $('#signin-form').show();
-      $('#signup-form').hide();
-    });
-  });
-</script>
+  </script>
 
 </body>
+
 </html>
