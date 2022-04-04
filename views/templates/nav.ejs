@@ -1,27 +1,38 @@
-<nav class="navbar navbar-expand-sm position-absolute w-100 navbar-light bg light" style="z-index: 8;">
- <div class="container-fluid px-xl-5 mx-xl-5">
-  <a class="navbar-brand d-block" href="/"><img src="/images/heynigeria logo.png" alt="" srcset=""></a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-     <span class="navbar-toggler-icon"></span>
-   </button>
+<nav class="navbar navbar-expand-xl position-absolute sticky-top w-100 navbar-light bg light" style="z-index: 8;">
+  <div class="container-fluid px-xl-5 mx-xl-5">
+    <a class="navbar-brand d-block" href="/"><img src="/images/heynigeria logo.png" alt="" srcset=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarNav">
-   <ul class="navbar-nav d-sm-flex align-items-center ms-auto">
-    <li class="nav-item">
-     <a href="/" class="nav-link text-white">Home</a>
-    </li>
-    <li class="nav-item mx-sm-4">
-     <a href="/user/auth" class="nav-link text-white">Sign up</a>
-    </li>
-    <li class="nav-item">
-     <a href="/shop" class="nav-link">
-      <button class="btn rounded btn-blue px-5">Shop</button>
-     </a>
-    </li>
-   </ul>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav d-sm-flex align-items-center ms-auto">
+        <li class="nav-item">
+          <a class="menu-toggler nav-link text-white">Menu</a>
+        </li>
+        <li class="nav-item mx-sm-4">
+          <a href="/user/auth" class="nav-link text-white">Sign in</a>
+        </li>
+        <li class="nav-item">
+          <a href="/shop" class="nav-link">
+            <button class="btn rounded btn-blue px-5">Shop</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="menu bg-blue">
+
+      <div class="menu-overlay">
+        <span class="close-menu btn-close text-danger"></span>
+        <li><a href="/user/auth">Login</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#faqs">FAQS</a></li>
+        <li><a href="#">Track Order</a></li>
+        <li><a href="#">Blog</a></li>
+      </div>
+    </div>
+
   </div>
-
- </div>
 </nav>
-
-

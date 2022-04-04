@@ -2,200 +2,200 @@
 <html lang="en" dir="ltr">
 
 <head>
- <meta charset="utf-8">
- <title>Hey Nigeria</title>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="/libraries/css/bootstrap.min.css">
- <link rel="stylesheet" href="/css/style.css">
- <!-- FONT AWESOME -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <meta charset="utf-8">
+  <title>Hey Logistics</title>
+  <meta name="description" content="Welcome to your No #1. logistic company.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/libraries/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
 </head>
 
 <body>
- <header>
-  <div class="alert bg-blue text-white text-center rounded-0 alert-dismissible fade show my-0" role="alert">
-   <p class="text-16 p-0 m-0">Now in Lagos. Get your freight delivered same-day in the whole district of Lagos</p>
-   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
+  <header>
+    <div class="alert bg-blue text-white text-center rounded-0 alert-dismissible fade show my-0" role="alert">
+      <p class="text-16 p-0 m-0">Now in Lagos. Get your freight delivered same-day in the whole district of Lagos</p>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 
 
-  <%- include('templates/carousel') %>
- </header>
- <main class="">
-  <%- include('templates/services') %>
-   <%- include('templates/faq') %>
-    <hr class="m-0 p-0">
-    <%- include('templates/how_to_use') %>
-     <%- include('templates/contact') %>
-      <hr class="m-0 p-0">
-      <%- include('templates/footer') %>
+    <%- include('templates/carousel') %>
+  </header>
+  <main class="">
+    <%- include('templates/services') %>
+      <%- include('templates/faq') %>
+        <hr class="m-0 p-0">
+        <%- include('templates/how_to_use') %>
+          <%- include('templates/contact') %>
+            <hr class="m-0 p-0">
+            <%- include('templates/footer') %>
 
- </main>
+  </main>
 
- <script type="text/javascript" src="/libraries/js/jquery-3.6.0.min.js"></script>
- <script type="text/javascript" src="/libraries/js/bootstrap.bundle.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-
-
- <script>
-  // how to know if you have scroll to the end of the page
-  // https://stackoverflow.com/questions/288699/get-scrollbar-width-using-javascript
-  gsap.registerPlugin(ScrollTrigger);
-
-  const tag = selector => document.querySelector(selector);
-  const tl = new TimelineMax({
-   duration: 1,
-   delay: 0,
-   immediateRender: true,
-  });
-  tl.fromTo(tag('.alert'), 1, {
-    opacity: 0,
-    y: -50
-   }, {
-    opacity: 1,
-    y: 0
-   }, '-=0.5')
-   .fromTo(tag('.carousel'), 1, {
-    opacity: 0,
-    y: 50
-   }, {
-    opacity: 1,
-    y: 0
-   }, '-=0.5')
-   .fromTo(tag('.navbar-brand'), {
-    opacity: 0,
-    y: -20,
-    ease: Power2.easeInOut
-   }, {
-    opacity: 1,
-    y: 0,
-    ease: Power2.easeOut
-   })
-   .fromTo($('.nav-item'), {
-    x: -80,
-    opacity: 0,
-   }, {
-    x: 0,
-    opacity: 1,
-    stagger: 0.2,
-    ease: Power2.easeOut
-   })
-   .fromTo([$('.carousel .active p'), $('.carousel .active button')], {
-    opacity: 0,
-    y: -20,
-   }, {
-    opacity: 1,
-    y: 0,
-    ease: Power2.easeOut,
-    stagger: 0.2
-   });
-
-  const tl2 = new TimelineMax({
-   scrollTrigger: {
-    trigger: tag('.services'),
-    triggerAction: "play pause resume reverse",
-    start: 'top bottom',
-    end: 'center bottom',
-    // end: 'bottom top',
-    // end: 'bottom bottom',
-
-    // pin: true,
-    // anticipatePin: 1,
-    // markers: true,
-    id: 'services',
-
-   }
-  });
-  tl2.from(tag('.row1 h2'), 1, {
-   opacity: 0,
-   x: -50,
-   ease: Power2.easeInOut,
-   duration: .4
-  })
-  tl2.fromTo($('.row1 h5, .row1 p'), 1, {
-   opacity: 0,
-   duration: .3,
-   y: -80,
-   //  ease: Power2.easeInOut,
-   stagger: 0.2,
-  }, {
-   opacity: 1,
-   duration: .3,
-   y: 0,
-   stagger: 0.2,
-  });
+  <script type="text/javascript" src="/libraries/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="/libraries/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
 
-  let tl4 = new TimelineMax({
-   scrollTrigger: {
-    trigger: tag('.row2-begin'),
-    triggerAction: "play pause resume reverse",
-    start: 'center bottom',
-    end: 'bottom bottom',
-    // scrub: true,
-   }
-  });
-  tl4.from($('.row2 .bg-blue'), 1, {
-   opacity: 0,
-   y: 80,
-   ease: Power2.easeInOut,
-   duration: .2,
-   stagger: 0.1,
-  });
+  <script>
+    // how to know if you have scroll to the end of the page
+    // https://stackoverflow.com/questions/288699/get-scrollbar-width-using-javascript
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tag = selector => document.querySelector(selector);
+    const tl = new TimelineMax({
+      duration: 1,
+      delay: 0,
+      immediateRender: true,
+    });
+    tl.fromTo(tag('.alert'), 1, {
+      opacity: 0,
+      y: -50
+    }, {
+      opacity: 1,
+      y: 0
+    }, '-=0.5')
+      .fromTo(tag('.carousel'), 1, {
+        opacity: 0,
+        y: 50
+      }, {
+        opacity: 1,
+        y: 0
+      }, '-=0.5')
+      .fromTo(tag('.navbar-brand'), {
+        opacity: 0,
+        y: -20,
+        ease: Power2.easeInOut
+      }, {
+        opacity: 1,
+        y: 0,
+        ease: Power2.easeOut
+      })
+      .fromTo($('.nav-item'), {
+        x: -80,
+        opacity: 0,
+      }, {
+        x: 0,
+        opacity: 1,
+        stagger: 0.2,
+        ease: Power2.easeOut
+      })
+      .fromTo([$('.carousel .active p'), $('.carousel .active button')], {
+        opacity: 0,
+        y: -20,
+      }, {
+        opacity: 1,
+        y: 0,
+        ease: Power2.easeOut,
+        stagger: 0.2
+      });
+
+    const tl2 = new TimelineMax({
+      scrollTrigger: {
+        trigger: tag('.services'),
+        triggerAction: "play pause resume reverse",
+        start: 'top bottom',
+        end: 'center bottom',
+        // end: 'bottom top',
+        // end: 'bottom bottom',
+
+        // pin: true,
+        // anticipatePin: 1,
+        // markers: true,
+        id: 'services',
+
+      }
+    });
+    tl2.from(tag('.row1 h2'), 1, {
+      opacity: 0,
+      x: -50,
+      ease: Power2.easeInOut,
+      duration: .4
+    })
+    tl2.fromTo($('.row1 h5, .row1 p'), 1, {
+      opacity: 0,
+      duration: .3,
+      y: -80,
+      //  ease: Power2.easeInOut,
+      stagger: 0.2,
+    }, {
+      opacity: 1,
+      duration: .3,
+      y: 0,
+      stagger: 0.2,
+    });
 
 
-  const tl3 = new TimelineMax({
-   scrollTrigger: {
-    trigger: tag('.row2-begin'),
-    triggerAction: "play pause resume reverse",
-    start: 'center bottom',
-    end: 'bottom bottom',
-    // end: 'bottom top',
-    // end: 'bottom bottom',
-    // scrub: true,
-    // pin: true,
-    anticipatePin: 1,
-    // markers: true,
-    id: 'row2-begin',
-    duration: .4,
-   }
-  });
-  tl3.fromTo(tag('.row2 img'), {
-   opacity: 0,
-   x: 50,
-   y: 50,
-   ease: Power2.easeInOut
-  }, {
-   opacity: 1,
-   x: 0,
-   y: 0,
-   ease: Power2.easeOut,
-  });
-
-  tl3.from($('.row2 h5'), 1, {
-   opacity: 0,
-   //  duration: 1,
-   y: -50,
-   //  ease: Power2.easeInOut,
-   stagger: .1,
-  });
-
-  tl3.from([$('.row2 p'), $('.row2 .bg-blue img')], 1, {
-   opacity: 0,
-   //  duration: 1,
-   y: 50,
-   //  ease: Power2.easeInOut,
-   stagger: .1,
-  });
-  tl3.from($('.row2 .bg-blue .fas'), 1, {
-   opacity: 0,
-   x: 20,
-   //  stagger: .1,
-  });
+    let tl4 = new TimelineMax({
+      scrollTrigger: {
+        trigger: tag('.row2-begin'),
+        triggerAction: "play pause resume reverse",
+        start: 'center bottom',
+        end: 'bottom bottom',
+        // scrub: true,
+      }
+    });
+    tl4.from($('.row2 .bg-blue'), 1, {
+      opacity: 0,
+      y: 80,
+      ease: Power2.easeInOut,
+      duration: .2,
+      stagger: 0.1,
+    });
 
 
+    const tl3 = new TimelineMax({
+      scrollTrigger: {
+        trigger: tag('.row2-begin'),
+        triggerAction: "play pause resume reverse",
+        start: 'center bottom',
+        end: 'bottom bottom',
+        // end: 'bottom top',
+        // end: 'bottom bottom',
+        // scrub: true,
+        // pin: true,
+        anticipatePin: 1,
+        // markers: true,
+        id: 'row2-begin',
+        duration: .4,
+      }
+    });
+    tl3.fromTo(tag('.row2 img'), {
+      opacity: 0,
+      x: 50,
+      y: 50,
+      ease: Power2.easeInOut
+    }, {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      ease: Power2.easeOut,
+    });
 
+    tl3.from($('.row2 h5'), 1, {
+      opacity: 0,
+      //  duration: 1,
+      y: -50,
+      //  ease: Power2.easeInOut,
+      stagger: .1,
+    });
+
+    tl3.from([$('.row2 p'), $('.row2 .bg-blue img')], 1, {
+      opacity: 0,
+      //  duration: 1,
+      y: 50,
+      //  ease: Power2.easeInOut,
+      stagger: .1,
+    });
+    tl3.from($('.row2 .bg-blue .fas'), 1, {
+      opacity: 0,
+      x: 20,
+      //  stagger: .1,
+    });
 
 
 
@@ -204,94 +204,123 @@
 
 
 
-  // $(document).ready(function() {
-  setInterval(e => {
-    //  $('.alert p')
-    if ($('.ci-two').hasClass('active')) $('.alert p').text('Now in Dallas. Get your freight delivered same-day in the Dallas-Fort Worth region.')
-    else if ($('.ci-three').hasClass('active')) $('.alert p').text('Now in Nigeria. Get your freight delivered same-day in the Dallas-Fort Worth region.')
-    else if ($('.ci-one').hasClass('active')) $('.alert p').text('Now in Lagos. Get your freight delivered same-day in the whole district of Lagos')
-
-   }, 2000)
-   // });
 
 
-  // store components in variables
-  const page = document.querySelector("body");
-  const wrapper = page
 
-  // ease value to be used in interpolation
-  const ease = 0.05; // 20%
+    // $(document).ready(function() {
+    setInterval(e => {
+      //  $('.alert p')
+      if ($('.ci-two').hasClass('active')) $('.alert p').text('Now in Dallas. Get your freight delivered same-day in the Dallas-Fort Worth region.')
+      else if ($('.ci-three').hasClass('active')) $('.alert p').text('Now in Nigeria. Get your freight delivered same-day in the Dallas-Fort Worth region.')
+      else if ($('.ci-one').hasClass('active')) $('.alert p').text('Now in Lagos. Get your freight delivered same-day in the whole district of Lagos')
 
-  // create an object to store scroll details
-  const scroll = {
-   current: 0, // current scroll position
-   target: 0, // target scroll position
-   limit: 0 // limit of scroll
-  };
+    }, 2000)
+    // });
 
-  // function to update target scroll position
-  const updateTarget = (e) => {
-   // set the target value to deltaY
-   // which is distance covered by mouseWheel
-   scroll.target += e.deltaY;
-  };
 
-  // create an event listener to listen for mouse-wheel
-  document.addEventListener("mousewheel", updateTarget);
+    // store components in variables
+    const page = document.querySelector("body");
+    const wrapper = page
 
-  // linear interpolation function
-  const lerp = (current, target) => {
-   // get distance between current & target scroll points
-   const distanceBetween = target - current;
+    // ease value to be used in interpolation
+    const ease = 0.05; // 20%
 
-   // get a percentage of that distance, in this case 20%
-   const distanceToTravel = distanceBetween * ease;
+    // create an object to store scroll details
+    const scroll = {
+      current: 0, // current scroll position
+      target: 0, // target scroll position
+      limit: 0 // limit of scroll
+    };
 
-   // add the % distance to the current scroll value
-   return current + distanceToTravel;
+    // function to update target scroll position
+    const updateTarget = (e) => {
+      // set the target value to deltaY
+      // which is distance covered by mouseWheel
+      scroll.target += e.deltaY;
+    };
 
-   // shorthand for lerp is
-   // current = current + ((target - current) * ease)
-  };
+    // create an event listener to listen for mouse-wheel
+    document.addEventListener("mousewheel", updateTarget);
 
-  // clamping function to limit mousewheel values
-  const clamp = (min, max, value) => {
-   const clamped = Math.min(Math.max(value, min), max);
-   return clamped;
-  };
+    // linear interpolation function
+    const lerp = (current, target) => {
+      // get distance between current & target scroll points
+      const distanceBetween = target - current;
 
-  // main scroll function
-  const smoothScroll = (e) => {
-   const maxScroll = wrapper.clientHeight - window.innerHeight - window.scrollY - 10 // -1 to prevent rounding issues;
-    //  maxScroll > 0 ? scroll.limit = maxScroll : scroll.limit = 0;
+      // get a percentage of that distance, in this case 20%
+      const distanceToTravel = distanceBetween * ease;
 
-   //  console.log(document.querySelector('header').clientHeight)
-   // clamp scroll target value
-   scroll.target = clamp(0, maxScroll, scroll.target);
-   //  console.log(scroll.target)
+      // add the % distance to the current scroll value
+      return current + distanceToTravel;
 
-   const {
-    current,
-    target
-   } = scroll;
+      // shorthand for lerp is
+      // current = current + ((target - current) * ease)
+    };
 
-   const transition = lerp(current, target);
-   scroll.current = transition;
+    // clamping function to limit mousewheel values
+    const clamp = (min, max, value) => {
+      const clamped = Math.min(Math.max(value, min), max);
+      return clamped;
+    };
 
-   // translate page wrapper based on lerped value
-   wrapper.style.transform = `translateY(-${scroll.current}px)`;
+    // main scroll function
+    const smoothScroll = (e) => {
+      const maxScroll = wrapper.clientHeight - window.innerHeight - window.scrollY - 10 // -1 to prevent rounding issues;
+      //  maxScroll > 0 ? scroll.limit = maxScroll : scroll.limit = 0;
 
-   // use requestAnimationFrame with callback
-   // to create an infinite loop of this function
-   // that updates 60 times per second
-   // or 30 times per second
-   // depending on browser refresh rate
-   window.requestAnimationFrame(smoothScroll);
-  };
+      //  console.log(document.querySelector('header').clientHeight)
+      // clamp scroll target value
+      scroll.target = clamp(0, maxScroll, scroll.target);
+      //  console.log(scroll.target)
 
-  // call smoothScroll to start loop
-  smoothScroll();
- </script>
+      const {
+        current,
+        target
+      } = scroll;
+
+      const transition = lerp(current, target);
+      scroll.current = transition;
+
+      // translate page wrapper based on lerped value
+      wrapper.style.transform = `translateY(-${scroll.current}px)`;
+
+      // use requestAnimationFrame with callback
+      // to create an infinite loop of this function
+      // that updates 60 times per second
+      // or 30 times per second
+      // depending on browser refresh rate
+      window.requestAnimationFrame(smoothScroll);
+    };
+
+    // call smoothScroll to start loop
+    // smoothScroll();
+
+
+    // document.addEventListener("DOMContentLoaded", function () {
+
+      const hideMenu = ()=>{
+        document.querySelector('.menu').style.transform = "translateX(100%)";
+      }
+    document.querySelector('.menu-toggler').addEventListener("click", e => {
+      // console.log
+      document.querySelector('.menu').style.transform = "translateX(0%)";
+    })
+    document.querySelector('.close-menu').addEventListener("click", e => {
+      // console.log
+        hideMenu()
+    })
+
+    document.querySelector('.menu').addEventListener("click", e=>{
+      if(e.target.tagName == "A") hideMenu()
+    })
+
+    document.addEventListener("scroll", e => {
+      console.log(e)
+    })
+
+    // hide navbar on scroll
+
+  </script>
 
 
 
