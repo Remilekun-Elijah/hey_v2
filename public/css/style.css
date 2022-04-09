@@ -406,6 +406,12 @@ img {
     object-fit: cover;
 }
 
+
+@media screen and (min-width: 1024px) {
+    .ci-two .caption {
+        font-size: 40px;
+    }
+}
 @media screen and (min-width: 992px) {
     .services .row2 .col_1 {
         width: 230px !important;
@@ -813,7 +819,7 @@ img {
 .navbarNav {
     /* background-color: var(--bs-primary); */
     position: absolute;
-    top: 0px;
+    top: 20px;
     right: 0;
     width: 300px;
     transform: translateX(100%);

@@ -1,8 +1,9 @@
 <nav class="navbar navbar-expand-xl position-absolute sticky-top w-100 navbar-light bg light" style="z-index: 8;">
   <div class="container-fluid px-xl-5 mx-xl-5">
     <a class="navbar-brand d-block" href="/"><img src="/images/heynigeria logo.png" alt="" srcset=""></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="" style="background-color: var(--bs-secondary); opacity: .6;; color:white"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=""
+      style="background-color: var(--bs-secondary); opacity: .6;; color:white" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -48,28 +49,24 @@
 
 <script>
   const menu = document.querySelector('.menu');
-  const navbarNav = document.querySelector('.navbarNav'); 
+  const navbarNav = document.querySelector('.navbarNav');
 
-const hideMenu = _ => _.style.transform = "translateX(100%)";
+  const hideMenu = _ => _.style.transform = "translateX(100%)";
 
-const showMenu = _ => _.style.transform = "translateX(0%)";
-// showMainMenu = showMenu(navbarNav),
-// hideMainMenu = hideMenu(navbarNav),
-// showSubMenu = showMenu(menu),
-// hideSubMenu = hideMenu(menu);
+  const showMenu = _ => _.style.transform = "translateX(0%)";
 
-document.querySelector('.menu-toggler').addEventListener("click", _=>showMenu(menu));
-document.querySelector('.close-menu').addEventListener("click", _=>hideMenu(menu));
+  document.querySelector('.menu-toggler').addEventListener("click", _ => showMenu(menu));
+  document.querySelector('.close-menu').addEventListener("click", _ => hideMenu(menu));
 
-const closeNavOnLinkClick = e => e.target.tagName == "A" ? hideMenu(menu) : null;
+  const closeNavOnLinkClick = e => e.target.tagName == "A" ? hideMenu(menu) : null;
 
-menu.addEventListener("click", closeNavOnLinkClick)
+  menu.addEventListener("click", closeNavOnLinkClick)
 
 
-document.querySelector('.navbar-toggler').addEventListener('click', _=> showMenu(navbarNav));
+  document.querySelector('.navbar-toggler').addEventListener('click', _ => showMenu(navbarNav));
 
-document.querySelector('.navbarNav span').addEventListener('click', _=> hideMenu(navbarNav));
+  document.querySelector('.navbarNav span').addEventListener('click', _ => hideMenu(navbarNav));
 
-document.querySelector('.nav-menu-toggler').addEventListener("click", _=>showMenu(menu));
-navbarNav.addEventListener("click", e => e.target.tagName == "A" ? hideMenu(navbarNav) : null)
+  document.querySelector('.nav-menu-toggler').addEventListener("click", _ => showMenu(menu));
+  navbarNav.addEventListener("click", e => e.target.tagName == "A" ? hideMenu(navbarNav) : null)
 </script>
