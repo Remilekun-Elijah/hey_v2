@@ -1,0 +1,45 @@
+
+
+body {
+ background-color: #333;
+ color: #fff;
+}
+
+.ad-div {
+ height: 100px;
+ background-color: var(--primary-blue, #185FAD);
+}
+
+.img-plane{
+  width: 70px;
+  height: 70px;
+}
+
+hr {
+ color: #fff !important;
+}
+main p, main ol li {
+ font-size: 20px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .img-plane{
+    width: 50px;
+    height: 50px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+ 
+@media screen and (max-width: 480px) {
+  .img-plane{
+    width: 40px;
+    height: 40px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}

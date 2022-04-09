@@ -16,7 +16,30 @@
 </head>
 
 <body>
+  <div class="mb-5">
+    <nav class="navbar navbar-expand-md position-absolute sticky-top w-100 navbar-dark bg-light my-0 py-0" style="z-index: 8;">
+      <div class="container-fluid px-xl-5 mx-xl-5">
+        <a class="navbar-brand d-block" href="/"><img src="/images/heynigeria logo.png" alt="" srcset=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav d-sm-flex align-items-center ms-auto">
+
+            <li class="nav-item">
+              <a href="/faqs" class="nav-link">
+                <button class="btn rounded btn-black px-5">FAQs</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+    </nav>
+  </div>
   <div class="sign_2">
     <div class="tab-content row ">
       <div class="d-flex justify-content-center">
@@ -24,8 +47,8 @@
           <img style="width: 100%; height: 100%; object-fit: contain;" src="/images/login_img.png" alt="">
         </div>
         <div class="col-md-6 d-none mt-0 img-2 pt-0 d-md-none d-md-block" -mg-1>
-          <img class="mt-0 mt-0 " style="width: 100%; height: 100%; object-fit: contain;"
-            src="/images/signup_img.png" alt="">
+          <img class="mt-0 mt-0 " style="width: 100%; height: 100%; object-fit: contain;" src="/images/signup_img.png"
+            alt="">
         </div>
         <div class="tab-pane active col-md-5 container ms-4" id="signup">
           <p class="fs-1 fw-bold pt-4 my-5 dm-sans text">Log in!</p>
@@ -39,11 +62,12 @@
               </a>
             </div>
           </div>
-          <form class="me-5 d-non signup_form" style="width:90%" action="/signin" method="post">
+          <form class="me-5 d-non signup_form" style="width:100%" action="/signin" method="post">
             <div class="form-group">
               <label class="my-3 fw-bold dm-sans" for="exampleInputEmail1">Email address</label>
               <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="email"
-                class="form-control border-0" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+                class="form-control border-0" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"
+                required>
             </div>
             <div class="form-group">
               <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Password</label>
@@ -58,28 +82,29 @@
             </div>
             <button type="submit" class="btn btn-primary my-4 dm-sans"
               style="width: 180px; height: 55px; border-radius: 0px">SIGN IN</button>
-            <p class="dm-sans d-md-none text-secondary mb-3">Don't have an account?<a class="btn text-primary signup_btn_alt">Sign Up.</a> 
-              <!-- <a class="text-decoration-none"
-                href="#"><span class="text-primary ">Click here</span></a> -->
-              </p>
-            <!-- <p class="dm-sans text-secondary mb-5">By signing up, you agree to our <a class="text-decoration-none"
-                href="#"><span class="text-primary ">Terms & Condition</span></a> and <a class="text-decoration-none"
-                href="#"><span class="text-primary "> Privacy Policy.</span></a> </p> -->
+            <p class="dm-sans d-md-none text-secondary mb-3">Don't have an account?<a
+                class="btn text-primary signup_btn_alt">Sign Up.</a>
+              
+            </p>
           </form>
 
-          <form class="me-5 d-none form-2 signin_form" style="width:90%" action="/signup" method="post">
+          <form class="me-5 d-none form-2 signin_form" style="width:100%" action="/signup" method="post">
             <div class="form-group">
-              <label class="my-3 fw-bold dm-sans" for="exampleInputEmail1">Email address <b class="text-danger">*</b></label>
+              <label class="my-3 fw-bold dm-sans" for="exampleInputEmail1">Email address <b
+                  class="text-danger">*</b></label>
               <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="email"
-                class="form-control border-0" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+                class="form-control border-0" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"
+                required>
             </div>
             <div class="form-group ">
-              <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Phone Number <b class="text-danger">*</b></label>
+              <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Phone Number <b
+                  class="text-danger">*</b></label>
               <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="text"
                 class="form-control border-0" id="exampleInputPassword1" name="phone_number" required minlength="10">
             </div>
             <div class="form-group">
-              <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Password <b class="text-danger">*</b></label>
+              <label class="my-3 fw-bold dm-sans" for="exampleInputPassword1">Password <b
+                  class="text-danger">*</b></label>
               <input style="height: 60px; background-color: rgb(235, 237, 245); border-radius: 0px" type="password"
                 class="form-control border-0" id="exampleInputPassword1" name="password" required>
             </div>
@@ -90,17 +115,18 @@
             </div>
             <button type="submit" class="btn my-3 btn-primary my- dm-sans"
               style="width: 180px; height: 50px; border-radius: 0px">SIGN UP</button>
-              <p class="dm-sans text-secondary">By signing up, you agree to our <a class="text-decoration-none"
+            <p class="dm-sans text-secondary">By signing up, you agree to our <a class="text-decoration-none"
                 href="#"><span class="text-primary ">Terms & Condition</span></a> and <a class="text-decoration-none"
                 href="#"><span class="text-primary "> Privacy Policy.</span></a> </p>
-                
-                <p class="dm-sans d-md-none text-secondary mt-0 mb-3">Already have an account?<a class="btn text-primary signin_btn_alt">Sign In.</a> 
-                </form>
-                <p class="text-center my-sm-5 my-3 fw-bold fw-normal">2021 HeyLogistics. All Rights Reserved.</p>
+
+            <p class="dm-sans d-md-none text-secondary mt-0 mb-3">Already have an account?<a
+                class="btn text-primary signin_btn_alt">Sign In.</a>
+          </form>
+          <p class="text-center my-sm-5 my-3 fw-bold fw-normal">2021 HeyLogistics. All Rights Reserved.</p>
         </div>
-        
+
       </div>
-      
+
       <!-- <div class="tab-content d-flex">
         
         <div class="tab-pane active col-md-5 container ms-4" id="signup">
@@ -118,8 +144,8 @@
       </div> -->
     </div>
   </div>
-  
-  
+
+
 
 
   <script src="../libraries/js/jquery-3.6.0.min.js"></script>
@@ -151,21 +177,21 @@
     });
 
     $('.sign_2 .signup_btn_alt').click(function () {
-        $('.sign_2 .text').text('Register!');
-        $('.sign_2 .signup_form').removeClass('d-block').addClass('d-none');
-        $('.sign_2 .signin_form').removeClass('d-none').addClass('d-block');
-        $('.sign_2 .img-1').removeClass("d-md-block").addClass("d-md-none");
-        $('.sign_2 .img-2').removeClass("d-md-none").addClass("d-md-block");
-      });
+      $('.sign_2 .text').text('Register!');
+      $('.sign_2 .signup_form').removeClass('d-block').addClass('d-none');
+      $('.sign_2 .signin_form').removeClass('d-none').addClass('d-block');
+      $('.sign_2 .img-1').removeClass("d-md-block").addClass("d-md-none");
+      $('.sign_2 .img-2').removeClass("d-md-none").addClass("d-md-block");
+    });
 
-      $('.sign_2 .signin_btn_alt').click(function () {
-        $('.sign_2 .text').text('Log in!');
-        $('.sign_2 .signup_form').removeClass('d-none').addClass('d-block');
-        $('.sign_2 .signin_form').removeClass('d-block').addClass('d-none');
-        $('.sign_2 .img-1').removeClass("d-md-none").addClass("d-md-block");
-        $('.sign_2 .img-2').removeClass("d-md-block").addClass("d-md-none");
-      });
-    
+    $('.sign_2 .signin_btn_alt').click(function () {
+      $('.sign_2 .text').text('Log in!');
+      $('.sign_2 .signup_form').removeClass('d-none').addClass('d-block');
+      $('.sign_2 .signin_form').removeClass('d-block').addClass('d-none');
+      $('.sign_2 .img-1').removeClass("d-md-none").addClass("d-md-block");
+      $('.sign_2 .img-2').removeClass("d-md-block").addClass("d-md-none");
+    });
+
   </script>
 
 </body>

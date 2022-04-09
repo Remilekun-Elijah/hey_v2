@@ -36,6 +36,10 @@
   </main>
 
   <script type="text/javascript" src="/libraries/js/jquery-3.6.0.min.js"></script>
+
+  <script src="/js/nav_top_ad.js"></script>
+
+
   <script type="text/javascript" src="/libraries/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
@@ -139,6 +143,7 @@
         // scrub: true,
       }
     });
+
     tl4.from($('.row2 .bg-blue'), 1, {
       opacity: 0,
       y: 80,
@@ -208,13 +213,7 @@
 
 
     // $(document).ready(function() {
-    setInterval(e => {
-      //  $('.alert p')
-      if ($('.ci-two').hasClass('active')) $('.alert p').text('Now in Dallas. Get your freight delivered same-day in the Dallas-Fort Worth region.')
-      else if ($('.ci-three').hasClass('active')) $('.alert p').text('Now in Nigeria. Get your freight delivered same-day in the Dallas-Fort Worth region.')
-      else if ($('.ci-one').hasClass('active')) $('.alert p').text('Now in Lagos. Get your freight delivered same-day in the whole district of Lagos')
 
-    }, 2000)
     // });
 
 
@@ -292,33 +291,7 @@
       window.requestAnimationFrame(smoothScroll);
     };
 
-    // call smoothScroll to start loop
-    // smoothScroll();
 
-
-    // document.addEventListener("DOMContentLoaded", function () {
-
-      const hideMenu = ()=>{
-        document.querySelector('.menu').style.transform = "translateX(100%)";
-      }
-    document.querySelector('.menu-toggler').addEventListener("click", e => {
-      // console.log
-      document.querySelector('.menu').style.transform = "translateX(0%)";
-    })
-    document.querySelector('.close-menu').addEventListener("click", e => {
-      // console.log
-        hideMenu()
-    })
-
-    document.querySelector('.menu').addEventListener("click", e=>{
-      if(e.target.tagName == "A") hideMenu()
-    })
-
-    document.addEventListener("scroll", e => {
-      console.log(e)
-    })
-
-    // hide navbar on scroll
 
   </script>
 

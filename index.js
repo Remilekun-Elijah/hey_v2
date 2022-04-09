@@ -14,6 +14,9 @@ app.get( '/', ( req, res ) => {
  res.render( 'index' );
 } );
 
+app.get("/faqs", (req, res) => {
+    res.render("faq");
+})
 app.get("/user/auth", (req, res) => {
     res.render("signup");
 })
